@@ -1,13 +1,23 @@
 import { useContext } from "react";
-//import { AppContext } from "./Store/AppContext";
+import { AppContext } from "../context/AppContext";
 
-function App() {
-    //const post = useContext(AppContext);
+const App = () => {
 
-    return (
-    <div>
-        <h1>Noticias</h1>
-    </div>
-)};
+    const movies  = useContext(AppContext);
+    console.log("main")
+
+    return ( 
+        <div>
+            <h1>Peliculas</h1>
+            <ul>
+                {movies.map((movie) => (
+                    <li> {movie.original_title}</li>
+                ))}
+            </ul>
+        </div>
+        
+
+    );
+}
 
 export default App;

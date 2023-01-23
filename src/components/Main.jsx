@@ -1,9 +1,30 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { AppContext } from "../context/AppContext";
+import Cards from "./Cards";
 
 const Main = () => {
-    const { movies, setMovies} = useState();
+
+    const movies  = useContext(AppContext);
+    const url = "https://image.tmdb.org/t/p/w500";
+
     return ( 
-        <h1>Hola Main</h1>
+        <div>
+            <h1>Peliculas</h1>
+            <Cards />
+            {/*<ul>
+                {movies.map((movie) => (
+
+
+
+                    <li key={movie.id}> {movie.original_title}
+                    <p>ID: {movie.id}</p>
+                    <img src= {url+movie.poster_path} alt="" />
+                    </li>
+                ))}
+                </ul> */}
+        </div>
+        
+
     );
 }
 
