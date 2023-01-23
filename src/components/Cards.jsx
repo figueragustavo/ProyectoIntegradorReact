@@ -20,11 +20,11 @@ const Cards = ({props}) =>{
       <Card.Body>
         <Card.Title>{movie.original_title}</Card.Title>
         <Card.Text>{movie.overview}</Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">+ Info</Button>
       </Card.Body>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon color="success"/>
+          <FavoriteIcon color="action"/>
         </IconButton>
       </CardActions>
     </Card>
