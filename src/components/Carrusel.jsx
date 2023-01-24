@@ -14,7 +14,7 @@ function Carrusel() {
       </img>
     </div>
     <div className="carousel-item">
-      <img src="	https://image.tmdb.org/t/p/w500/7CNCv9uhqdwK7Fv4bR4nmDysnd9.jpg" className="d-block w-45" alt="Megan">
+      <img src="https://image.tmdb.org/t/p/w500/7CNCv9uhqdwK7Fv4bR4nmDysnd9.jpg" className="d-block w-45" alt="Megan">
         </img>
     </div>
   </div>

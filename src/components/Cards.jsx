@@ -1,12 +1,7 @@
 import * as React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { CardActions } from '@mui/material';
-import { IconButton } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { CardGroup } from 'react-bootstrap';
+
 import Row from 'react-bootstrap/Row';
 
 
@@ -16,28 +11,25 @@ function Cards({ props }) {
   const movies = useContext(AppContext);
   const url = "https://image.tmdb.org/t/p/w500";
 
- 
+
 
   return (
-    <Row col={55} md={55} className="g-4">
-    <CardGroup>
-      {movies.map((movie) => (
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src=""/>
-          <Card.Body>
-            <Card.Title>{movie.original_title}</Card.Title>
-            <Card.Text>{movie.overview}</Card.Text>
-            <Button variant="primary">+ Info</Button>
-          </Card.Body>
-          <CardActions disableSpacing>
-            <IconButton aria-label="add to favorites">
-              <FavoriteIcon color="action" />
-            </IconButton>
-          </CardActions>
-        </Card>
+
+    <div className='row justify-content-center'>
+        {movies.map((movie) => (
+        <div className="card col-4" style={{ width: '25rem' }}>
+          <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} className="card-img-top" alt="Peliculas" />
+          <div className="card-body d-flex flex-column justify-content-between gap-4 ">
+            <h5 className="card-title">{movie.original_title}</h5>
+            <p className="card-text">{movie.overview}</p>
+            <button className='btn btn-info'>hola</button>
+          </div>
+        </div>
+
       ))}
-    </CardGroup>
-    </Row>
+
+    </div>
+
   );
 }
 
