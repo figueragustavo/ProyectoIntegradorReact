@@ -8,7 +8,8 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { CardGroup } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
-import {useParams} from 'react-router-dom';
+
+
 
 function Cards({ props }) {
 
@@ -18,11 +19,11 @@ function Cards({ props }) {
  
 
   return (
-    <Row col={1} md={0} className="g-4">
+    <Row col={55} md={55} className="g-4">
     <CardGroup>
       {movies.map((movie) => (
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" style_size='200px' src={url + movie.poster_path} />
+          <Card.Img variant="top" src=""/>
           <Card.Body>
             <Card.Title>{movie.original_title}</Card.Title>
             <Card.Text>{movie.overview}</Card.Text>

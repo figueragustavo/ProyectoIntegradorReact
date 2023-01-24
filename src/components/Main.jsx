@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import Cards from "./Cards";
 
+
 const Main = () => {
 
     const movies  = useContext(AppContext);
@@ -11,6 +12,7 @@ const Main = () => {
         <div>
             <h1>Peliculas</h1>
             <Cards />
+        
             {/*<ul>
                 {movies.map((movie) => (
 
