@@ -1,34 +1,16 @@
-import React from 'react';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function Carrusel() {
  
   return (
-    <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img src="https://image.tmdb.org/t/p/w500/vDGr1YdrlfbU9wxTOdpf3zChmv9.jpg" className="d-block w-45" alt="Glass Onion">
+    <div className="row mx-0 my-5 gap-4 justify-content-center"  >
+      <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2020/08/hipertextual-podras-pasar-noche-ultimo-blockbuster-mundo-gracias-airbnb-2020867279.jpg?resize=1536%2C991&ssl=1"width="300" height="800" alt="BLOCKBUSTER">
       </img>
-    </div>
-    <div className="carousel-item">
-      <img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" className="d-block w-45" alt="Avatar">
-      </img>
-    </div>
-    <div className="carousel-item">
-      <img src="https://image.tmdb.org/t/p/w500/7CNCv9uhqdwK7Fv4bR4nmDysnd9.jpg" className="d-block w-45" alt="Megan">
-        </img>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-
+   </div>
   )
+  
 }
 
 export default Carrusel;
