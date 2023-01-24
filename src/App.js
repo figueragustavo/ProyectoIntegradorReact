@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Favoritos from "./components/Favoritos";
 import AppContextProvider from "./context/AppContext";
 import Carrusel from './components/Carrusel';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 
@@ -13,11 +14,13 @@ import Carrusel from './components/Carrusel';
 function App() {
   return (
     <AppContextProvider>
-      <Header />
-      <Carrusel />
-      <Main />
-      <Footer />
-      <Favoritos />
+      <BrowserRouter>
+        <Header />
+        <Carrusel />
+        <Main />
+        <Footer />
+        <Favoritos />
+      </BrowserRouter>
     </AppContextProvider>
   );
 }
