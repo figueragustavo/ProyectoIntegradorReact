@@ -2,9 +2,11 @@ import * as React from 'react';
 //import { useContext } from "react";
 //import { AppContext } from "../context/AppContext";
 import { FiHeart } from "react-icons/fi";
+import { useState } from 'react';
 
 
 function Card(props) {
+  const [activado, setActivado] = useState(false);
   
   const {movie} = props;
 
@@ -17,7 +19,7 @@ function Card(props) {
               <h5 className="card-title">{movie.original_title}</h5>
             </div>
             <div className='d-flex justify-content-between'>
-              <a href="#1" className="text-danger"><FiHeart /></a>
+              <a href="#1" className="text-danger"><FiHeart fill={activado ? "red" : "none"} onClick={() => activado ? setActivado(false): setActivado(true)} /></a>
               <p className="card-text">Calificación {movie.vote_average}</p>
             </div>
           </div>
