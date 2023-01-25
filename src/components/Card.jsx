@@ -3,6 +3,7 @@ import * as React from 'react';
 //import { AppContext } from "../context/AppContext";
 import { FiHeart } from "react-icons/fi";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 function Card(props) {
@@ -19,14 +20,14 @@ function Card(props) {
               <h5 className="card-title">{movie.original_title}</h5>
             </div>
             <div className='d-flex justify-content-between'>
-              <a href="#1" className="text-danger"><FiHeart fill={activado ? "red" : "none"} onClick={() => activado ? setActivado(false): setActivado(true)} /></a>
+              <Link to={{pathname:`/favoritos/${movie.id}`, state:{some:movie.id}}} className="text-danger" ><FiHeart fill={activado ? "red" : "none"} onClick={() => activado ? setActivado(false): setActivado(true)} /></Link >
               <p className="card-text">Calificación {movie.vote_average}</p>
             </div>
           </div>
         </div>
-
-
   );
+
+  
 }
 
 export default Card;
