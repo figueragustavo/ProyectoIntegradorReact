@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { FiHeart } from 'react-icons/fi';
+import { FiHeart } from "react-icons/fi";
 
 function Cards() {
-
+  
   const movies = useContext(AppContext);
 
   return (
 
     <div className="row mx-0 my-5 gap-4 justify-content-center">
       {movies.map((movie) => (
-        <div className="card p-2 col-2">
+        <div className="card p-2 col-4 col-sm-3 col-xl-2" key={movie.id}>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="card-img-top" alt="Peliculas" />
           <div className="card-body d-flex flex-column justify-content-between gap-4">
             <div>
