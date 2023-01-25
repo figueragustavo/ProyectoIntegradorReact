@@ -1,16 +1,15 @@
 import * as React from 'react';
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+//import { useContext } from "react";
+//import { AppContext } from "../context/AppContext";
 import { FiHeart } from "react-icons/fi";
 
-function Cards() {
+
+function Card(props) {
   
-  const movies = useContext(AppContext);
+  const {movie} = props;
 
   return (
 
-    <div className="row mx-0 my-5 gap-4 justify-content-center">
-      {movies.map((movie) => (
         <div className="card p-2 col-4 col-sm-3 col-xl-2" key={movie.id}>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="card-img-top" alt="Peliculas" />
           <div className="card-body d-flex flex-column justify-content-between gap-4">
@@ -24,11 +23,8 @@ function Cards() {
           </div>
         </div>
 
-      ))}
-
-    </div>
 
   );
 }
 
-export default Cards;
+export default Card;

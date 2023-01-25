@@ -16,7 +16,7 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active text-white-50" aria-current="page" to="/"><BiCameraMovie /> Películas</Link>
+                            <Link className="nav-link active text-white-50" aria-current="page" to="/peliculas"><BiCameraMovie /> Películas</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link text-white-50" aria-current="page" to="/favoritos"><FiHeart /> Favoritos</Link>

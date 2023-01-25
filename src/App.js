@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import Favoritos from "./components/Favoritos";
 import AppContextProvider from "./context/AppContext";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 function App() {
   return (
     <AppContextProvider>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import Cards from "./Cards";
+import Movies from "./Movies";
 import Carrusel from "./Carrusel";
 
 
@@ -13,7 +13,7 @@ const Main = () => {
         <main>
             <Carrusel />
             <h1 className="text-center">Películas</h1>
-            <Cards />
+            <Movies />
             {/*<ul>
                 {movies.map((movie) => (
                     <li key={movie.id}> {movie.original_title}
